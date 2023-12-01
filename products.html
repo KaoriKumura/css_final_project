@@ -37,6 +37,37 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="products-slideshow-whole-part">
+                <div class="products-slideshow-grid-x">
+                    <div class="products-slideshow-container">
+                        <div class="products-image-container"><img src="image/productImage1.png" alt="productImage1"></div>
+                    </div>             
+                    <div class="products-slideshow-container">
+                        <div class="products-image-container"><img src="image/productImage2.png" alt="productImage2"></div>
+                    </div>
+                    <div class="products-slideshow-container">
+                        <div class="products-image-container"><img src="image/productImage3.png" alt="productImage3"></div>
+                    </div>
+                    <div class="products-slideshow-container">
+                        <div class="products-image-container"><img src="image/productImage4.png" alt="productImage4"></div>
+                    </div>
+                    <div class="products-slideshow-container">
+                        <div class="products-image-container"><img src="image/productImage5.png" alt="productImage5"></div>
+                    </div>
+                    <div class="products-slideshow-container">
+                        <div class="products-image-container"><img src="image/productImage6.png" alt="productImage6"></div>
+                    </div>              
+                    <div class="button-container">
+                        <button id="productsbutton1" onclick="plusDivs(-1)">&#10094</button>
+                        <button id="productsbutton2" onclick="plusDivs(+1)">&#10095</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            
+        </section>
         <section class="footer-grid-x">
             <div class="footer-container">
                 <h3>STARBUCKS<sup>&#174</sup> COFFEE BEANS</h3>
@@ -51,5 +82,52 @@
                 </P>
             </div>
         </section>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            /*
+            var slideTextIndex = 1;
+            showTextDivs(slideTextIndex);
+            */
+
+            function plusDivs(n) {
+            showDivs(slideIndex += n);
+            /*showTextDivs(slideTextIndex += n);*/
+            console.log(slideIndex);
+            /*console.log(slideTextIndex);*/
+            }
+
+            function showDivs(n) {
+            var i;
+            var slides = document.getElementsByClassName("products-slideshow-container");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            }
+            /*
+            function showTextDivs(n) {
+                var i;
+                var slidesText = document.getElementsByClassName("text-container");
+                if (n > slidesText.length) {
+                    slideTextIndex = 1;
+                }
+                if (n < 1) {
+                    slideTextIndex = slidesText.length;
+                }
+                for (i = 0; i < slidesText.length; i++) {
+                    slidesText[i].style.display = "none";
+                }
+                slidesText[slideTextIndex - 1].style.display = "block";
+                }
+            */
+        </script>
     </body>
 </html>
