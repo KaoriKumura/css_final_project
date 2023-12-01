@@ -1,0 +1,426 @@
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    letter-spacing: 0.1rem;
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: 0.2rem;
+}
+
+:root {
+    --rem: 16;
+}
+
+body, html {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: white;
+}
+
+.video-container {
+    position: relative;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+}
+
+.title-grid-x {
+    display: flex;
+    margin-bottom: 7em;
+}
+
+.video-container video {
+    width: 100%;
+    object-fit: cover;
+}
+
+.video-color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: darksalmon;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.title h1 {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    margin: 0;
+    font-size: 7vw;
+    opacity: 0.5;
+}
+
+.index h1 {
+    padding-left: 26vw;
+}
+
+.about h1 {
+    padding-left: 37vw;
+}
+
+.contact h1 {
+    padding-left: 31vw;
+}
+
+.products h1 {
+    padding-left: 30vw;
+}
+
+/*nav bar*/
+
+.section-nav {
+    height: 100%;
+}
+
+.nav-container {
+    height: 7rem;
+    background-color: #8d7e7a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-grid-x {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+a[href] {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #cacaca;
+}
+
+
+
+/*slogan*/
+
+.slogan-whole-part {
+    background-color: #8db8ac;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    font-size: 2.917vw;
+    line-height: 4.44vw;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.slogan-grid-x {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 90rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.slogan-head {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.slogan-body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+/*slideshow*/
+
+.slideshow-grid-x {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.slideshow-container {
+    display: none;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.button-container {
+    position: absolute;
+    z-index: 3;
+}
+
+button[onclick="plusDivs(-1)"] {
+    left: 5vw;
+    display: inline;
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    background: #85e0d500;
+    border: 0;
+    font-size: 5vw;
+    color: #cacaca;
+
+}
+
+button[onclick="plusDivs(+1)"] {
+    margin-left: 85vw;
+    display: inline;
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    background: #85e0d500;
+    border: 0;
+    font-size: 5vw;
+    color: #cacaca;
+}
+
+.text-container {
+    position: absolute;
+    z-index: 5;
+    margin-left: 15vw;
+    padding-bottom: 15vw;
+    margin-right: 15vw;
+}
+
+.slideshow-title h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+}
+
+.slideshow-content p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+.text-container {
+    display: none;
+}
+
+/*home about preview*/
+
+.about-preview-grid-x {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.about-preview-container {
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    max-width: 90rem;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.about-preview-image {
+    margin: 0;
+    padding:0;
+    margin-left: 4.5rem;
+}
+
+.about-preview-image img {
+    width: 100%;
+}
+
+.about-preview-text {
+    color: #5d7871;
+    margin: 0;
+    padding:0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.about-preview-text h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+}
+
+.about-preview-text p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+}
+
+.about-preview-text button {
+    border: none;
+    font-size: 18px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    background: #8db8ac;
+}
+
+/*home subscribe*/
+
+.subscribe-grid-x {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.subscribe-background-image {
+    background-image: url(../image/view4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.subscribe-form-grid-x {
+    width: 100%;
+    margin: 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.subscribe-form-continer {
+    background-color: rgba(255, 2555, 255, 0.5);
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.subscribe-form-continer h2 {
+    color: #346458;
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+    line-height: 3rem;
+    padding-bottom: 3rem;
+}
+
+.subscribe-form-continer form div input {
+    font-size: 24px;
+    width: 60%;
+    padding: 1rem;
+    color: #8db8ac;
+    margin-bottom: 3rem;
+}
+
+::placeholder {
+    color: #8d7e7a;
+}
+
+.subscribe-form-continer button {
+    border: 0;
+    background: #346458;
+    color: white;
+    font-size: 18px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/*footer*/
+
+.footer-grid-x {
+    background: #8d7e7a;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    text-align: center;
+    margin: 0;
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+}
+
+.footer-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+}
+
+.footer-container li {
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.footer-container ul > *:not(:last-child) {
+    margin-right: 3rem;
+}
+
+a[href="#"] {
+    font-size: 1rem;
+}
+
+.footer-container p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
