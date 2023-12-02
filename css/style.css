@@ -458,14 +458,16 @@ a[href="#"] {
     color: #8d7e7a;
 }
 
-div.form{
+/*form page*/
+
+.form_section div.form{
     color: darkgray;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form{
+.form_section form{
     color: darkgray;
     display: flex;
     flex-direction: column;
@@ -473,26 +475,26 @@ form{
     width: 30%;
 }
 
-label.form-title {
+.form_section label.form-title {
     padding-top: 20px;
     padding-bottom: 5px;
 }
 
-input.form-input {
+.form_section input.form-input {
     border: none;
     border-bottom: 2px solid darkgray;
     outline: none;
     margin-top: 15px;
 }
 
-textarea{
+.form_section textarea{
     border-bottom: 2px solid darkgray;
     border-radius: 0.8;
     outline: none;
     margin-top: 15px;
 }
 
-button.submit {
+.form_section button.submit {
     padding: 5px;
     margin-top: 20px;
     background: #8DB8AC;
@@ -504,11 +506,11 @@ button.submit {
     font-size: 16px;
 }
 
-button.submit:hover{
+.form_section button.submit:hover{
     background: #8D7E7A;
 }
 
-textarea {
+.form_section textarea {
     border-bottom: 2px solid darkgray;
     outline: none;
     box-sizing: border-box;
