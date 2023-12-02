@@ -533,12 +533,9 @@ img.xlogo{
     
 }
 
-img.instalogo{
+img.instalogo, img.facebooklogo{
     width: 50px;
-}
 
-img.facebooklogo{
-    width: 50px;
 }
 
 .socialmedia-xlogo, .socialmedia-instalogo{
@@ -552,4 +549,9 @@ h2.slogan-head{
 
 div.company-history-part{
     color:#1E3932 ;
+
+}
+
+div.photo_hover{
+    display: flex;
 }
