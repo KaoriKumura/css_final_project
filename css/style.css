@@ -760,3 +760,28 @@ div.company-history-part{
   font-size: 18px;
   line-height: 30px;
 }
+
+.store_pic_part{
+    display: flex;
+    background-color: #000;
+}
+
+.store_title{
+    font-family: 'Sumana', serif;
+    position: absolute;
+    font-size: 82px;
+    line-height: 98px;
+    transform: translate(30vh,73vh);
+}
+
+.store_subtitle{
+    font-family: 'Sumana', serif;
+    position: absolute;
+    transform: translate(30vh,73vh);
+}
+
+img.store{
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
