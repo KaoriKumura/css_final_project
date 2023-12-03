@@ -580,7 +580,7 @@ a[href="#"] {
 
 #product-detail-recommend-icon1, #product-detail-recommend-icon2, #product-detail-recommend-icon3, #product-detail-recommend-icon4, #product-detail-recommend-icon5, #product-detail-recommend-icon6 {
     padding: 0.8vw;
-    border: black solid 0.1vw;
+    border: #000 solid 0.1vw;
 }
 
 #product-detail-nutrition-icon1, #product-detail-nutrition-icon2, #product-detail-nutrition-icon3, #product-detail-nutrition-icon4, #product-detail-nutrition-icon5, #product-detail-nutrition-icon6 {
