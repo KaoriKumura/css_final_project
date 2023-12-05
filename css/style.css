@@ -742,6 +742,12 @@ button {
     background: white;
     font-size: 40px;
     color:#1E3932 ;
+    padding-bottom: 1rem;
+}
+
+span{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* social media link */
