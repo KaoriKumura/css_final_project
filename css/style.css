@@ -650,7 +650,7 @@ a[href="#"] {
 
 /*form page*/
 .contact_us{
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Sumana', serif;
     color:#1E3932 ;
     text-align: center;
@@ -662,7 +662,6 @@ a[href="#"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
 }
 
 .form_section form{
@@ -670,6 +669,7 @@ a[href="#"] {
     display: flex;
     flex-direction: column;
     padding: 30px;
+    padding-bottom: 50px;
     width: 30%;
 }
 
@@ -861,21 +861,22 @@ div.company-history-part{
 
 .store_pic_part{
     display: flex;
-    background-color: #000;
+    background-color:#1E3932 ;
 }
 
 .store_title{
     font-family: 'Sumana', serif;
-    position: absolute;
-    font-size: 82px;
+    font-size: 70px;
     line-height: 98px;
-    transform: translate(30vh,73vh);
+    margin: 50px;
+    margin-top: 400px;
 }
 
 .store_subtitle{
     font-family: 'Sumana', serif;
     position: absolute;
-    transform: translate(30vh,73vh);
+    margin: 50px;
+    margin-top: 345px;
 }
 
 img.store{
