@@ -11,17 +11,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Caudex&family=Croissant+One&family=DM+Mono:wght@300&family=Kanit:wght@300&family=Montserrat+Alternates:wght@300&family=Poltawski+Nowy&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	</head>
     <body>
         <section class="section-nav">
             <div class="nav-container nav-grid-x">
-                <a href="index.html">HOME</a>
-                <a href="products.html">PRODUCTS</a>
+                <a class="navbar-link" href="index.html">HOME</a>
+                <a class="navbar-link" href="products.html">PRODUCTS</a>
                 <a>
                     <img src="image/StarbucksLogo.svg" alt="logo">
                 </a>
-                <a href="about.html">ABOUT</a>
-                <a href="contact.html">CONTACT</a>
+                <a class="navbar-link" href="about.html">ABOUT</a>
+                <a class="navbar-link" href="contact.html">CONTACT</a>
             </div>
             <div class="video-container title-grid-x">
                 <div class="title about"><h1>ABOUT</h1></div>
@@ -94,5 +95,22 @@
                 </P>
             </div>
         </section>
+        <script>
+            /*navbar change*/
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 100) {
+                      $(".nav-container").css("background" , "#8d7e7a7a");
+                      $(".navbar-link").css("color" , "#38241e");
+                    }
+              
+                    else{
+                        $(".nav-container").css("background" , "#8d7e7a");
+                        $("a[href]").css("color" , "#cacaca");  	
+                    }
+                })
+              })
+        </script>
     </body>
 </html>

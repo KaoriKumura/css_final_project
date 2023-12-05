@@ -8,18 +8,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="image/StarbucksLogo.svg" type="image/svg" sizes="10x10"/>
 		<link rel="stylesheet" href="css/style.css" />
-
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	</head>
     <body>
         <section class="section-nav">
             <div class="nav-container nav-grid-x">
-                <a href="index.html">HOME</a>
-                <a href="products.html">PRODUCTS</a>
+                <a class="navbar-link" href="index.html">HOME</a>
+                <a class="navbar-link" href="products.html">PRODUCTS</a>
                 <a>
                     <img src="image/StarbucksLogo.svg" alt="logo">
                 </a>
-                <a href="about.html">ABOUT</a>
-                <a href="contact.html">CONTACT</a>
+                <a class="navbar-link" href="about.html">ABOUT</a>
+                <a class="navbar-link" href="contact.html">CONTACT</a>
             </div>
             <div class="video-container title-grid-x">
                 <div class="title products"><h1>PRODUCTS</h1></div>
@@ -767,6 +767,22 @@
                 getPreviewBr6.style.borderColor = "black";
                 getRecommendBr6.style.borderColor = "#8DB8AC";
             })
+
+            /*navbar change*/
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 100) {
+                      $(".nav-container").css("background" , "#8d7e7a7a");
+                      $(".navbar-link").css("color" , "#38241e");
+                    }
+              
+                    else{
+                        $(".nav-container").css("background" , "#8d7e7a");
+                        $("a[href]").css("color" , "#cacaca");  	
+                    }
+                })
+              })
         </script>
     </body>
 </html>
