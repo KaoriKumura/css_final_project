@@ -41,7 +41,55 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="frequent_quetions_part">
+                <h1 class="frequent_quetions_title">Frequently Asked Questions</h1>
+                <div class="question1">
+                    <p class="frequent_quetion">ARE STARBUCKS® COFFEE ENHANCER PACKAGING RECYCLABLE ?</p>
+                    <button onclick="toggleAnswer(1)">+</button>
+                    <div id="answer1" class="answer">
+                        <p class="frequent_answer">Yes, the Starbucks® Coffee Enhancer packaging is recyclable! Simply place the bottle in your recycling bin after removing the sleeve.</p>
+                        <p class="frequent_answer">For Alberta residents, please do not remove the sleeve when recycling. Starbucks® Coffee Enhancers can be returned to your local bottle depot for a refund.</p>
+                    </div>
+                    <hr class="line">
+                </div>
+                <div class="question2">
+                    <p class="frequent_quetion">WHERE CAN I BUY STARBUCKS® COFFEE ENHANCERS?</p>
+                    <button onclick="toggleAnswer(2)">+</button>
+                    <div id="answer2" class="answer">
+                        <p class="frequent_answer">They are available for purchase at your local grocery store in the refrigerated dairy section.</p>
+                    </div>
+                    <hr class="line">
+                </div>
+                <div class="question3">
+                    <p class="frequent_quetion">WHAT IS THE SHELF LIFE OF STARBUCKS® COFFEE ENHANCERS?</p>
+                    <button onclick="toggleAnswer(3)">+</button>
+                    <div id="answer3" class="answer">
+                        <p class="frequent_answer">Starbucks® Coffee Enhancers should be used within 14 days after opening or before the use-by date, whichever comes first. The shelf life can vary due to packaging materials and manufacturing locations.</p>
+                        <p class="frequent_answer">Shake Before Use. Do Not Freeze. Keep Refrigerated. Store Between 33°F and 45°F. For Best Quality, use within 14 Days of Opening.</p>
+                    </div>
+                    <hr class="line">
+                </div>
+                <div class="question4">
+                    <p class="frequent_quetion">WHERE ARE STARBUCKS® COFFEE ENHANCERS MANUFACTURED?</p>
+                    <button onclick="toggleAnswer(4)">+</button>
+                    <div id="answer4" class="answer">
+                        <p class="frequent_answer">Starbucks® Coffee Enhancers are proudly prepared in Toronto, Canada!</p>
+                    </div>
+                    <hr class="line">
+                </div>
+                <div class="question5">
+                    <p class="frequent_quetion">ARE STARBUCKS® COFFEE ENHANCERS MADE WITH ARTIFICIAL COLOURS OR FLAVOURS?</p>
+                    <button onclick="toggleAnswer(5)">+</button>
+                    <div id="answer5" class="answer">
+                        <p class="frequent_answer">No, Starbucks® Coffee Enhancers are made with no artificial colours, flavours or sweeteners.</p>
+                    </div>
+                    <hr class="line">
+                </div>
+            </div>
+        </section>
         <section class="form_section">
+            <div class="contact_us">Contact Us</div>
             <div class="form">
                 <form action="">
                     <label class="form-title" for="fname">FIRST NAME</label>
@@ -54,7 +102,7 @@
                     <input class="form-input" type="email" id="email" name="email" required>
                 
                     <label class="form-title" for="message">MESSAGE</label>
-                    <textarea id="message" name="subject" placeholder="message" style="height:200px"></textarea>
+                    <textarea id="message" name="subject" style="height:200px"></textarea>
                     <button class="submit" type="submit">Submit</button>
                 </form>
             </div>
@@ -91,6 +139,7 @@
             </div>
         </section>
         <script>
+<<<<<<< Updated upstream
             /*navbar change*/
             $(document).ready(function(){
                 $(window).scroll(function(){
@@ -107,5 +156,20 @@
                 })
               })
         </script>
+=======
+            function toggleAnswer(questionNumber) {
+              var answerDiv = document.getElementById('answer' + questionNumber);
+              var currentDisplay = window.getComputedStyle(answerDiv).display;
+        
+              if (currentDisplay === 'none') {
+                answerDiv.style.display = 'block';
+                document.querySelector('#button' + questionNumber).textContent = '+' + questionNumber;
+              } else {
+                answerDiv.style.display = 'none';
+                document.querySelector('#button' + questionNumber).textContent = '-' + questionNumber;
+              }
+            }
+          </script>
+>>>>>>> Stashed changes
     </body>
 </html>
