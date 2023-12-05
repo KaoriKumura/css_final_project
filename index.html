@@ -43,13 +43,13 @@
         <section>
             <div class="slideshow-whole-part">
                 <div class="slideshow-grid-x">
-                    <div class="slideshow-container">
+                    <div class="slideshow-container animate">
                         <div class="image-container"><img src="image/newsImage1.jpg" alt="newsImage1"></div>
                     </div>
-                    <div class="slideshow-container">
+                    <div class="slideshow-container animate">
                         <div class="image-container"><img src="image/newsImage2.jpg" alt="newsImage2"></div>
                     </div>
-                    <div class="slideshow-container">
+                    <div class="slideshow-container animate">
                         <div class="image-container"><img src="image/newsImage3.jpg" alt="newsImage3"></div>
                     </div>
                     <div class="button-container">
@@ -60,7 +60,7 @@
                         <div class="slideshow-title"><h2>ROAST SPECTRUM</h2></div>
                         <div class="slideshow-content"><p>From our home to yours, <br> include in our Starbucks<sup>&#174</sup> at Home products and recipes.</p></div>
                     </div>
-                    <div class="text-container">
+                    <div class="text-container animate">
                         <div class="slideshow-title"><h2>BRING HOME FESTIVE JOY</h2></div>
                         <div class="slideshow-content"><p>Discover the different coffee and flavour <br> profiles within our Starbucks<sup>&#174</sup> Roast Spectrum, <br> with 3 roast categories to explore, find your <br> perfect coffee</p></div>
                     </div>
@@ -121,8 +121,11 @@
             var slideTextIndex = 1;
             showTextDivs(slideTextIndex);
 
+            var indicator = 0;
 
             function plusDivs(n) {
+            
+            indicator = n;    
             showDivs(slideIndex += n);
             showTextDivs(slideTextIndex += n);
             console.log(slideIndex);
@@ -132,12 +135,27 @@
             function showDivs(n) {
             var i;
             var slides = document.getElementsByClassName("slideshow-container");
+            var animation = document.getElementsByClassName("animate");
+
             if (n > slides.length) {
                 slideIndex = 1;
             }
             if (n < 1) {
                 slideIndex = slides.length;
             }
+
+            for (i = 0; i < animation.length; i++) {
+                animation[i].style.animationName = "none";
+            }
+
+            if(indicator == +1){
+                animation[slideIndex - 1].style.animationName = "leftmove";
+            }
+
+            if(indicator == -1){
+                animation[slideIndex - 1].style.animationName = "rightmove";
+            }
+
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }

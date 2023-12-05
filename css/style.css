@@ -29,8 +29,16 @@ body {
     padding: 0;
     line-height: 1;
     color: white;
+    background-color: #ffffff;
 }
 
+button, a {
+    cursor: pointer;
+}
+
+
+
+/*title*/
 .video-container {
     position: relative;
     top: 7rem;
@@ -114,10 +122,6 @@ a[href] {
     color: #cacaca;
 }
 
-
-
-
-
 /*slogan*/
 
 .slogan-whole-part {
@@ -170,6 +174,7 @@ a[href] {
     margin: 0;
     padding: 0;
     justify-content: space-between;
+    background-color: #cacaca;
 }
 
 .slideshow-container {
@@ -178,6 +183,34 @@ a[href] {
 
 .image-container img {
     width: 100%;
+}
+
+.animate {
+    animation-name: leftmove;
+    animation-duration: 500ms;
+    position: relative;
+}
+
+@keyframes leftmove {
+    0%{
+        left: -1000px;
+        opacity: 0
+    }
+    100%{
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes rightmove {
+    0%{
+        right: -1000px;
+        opacity: 0
+    }
+    100%{
+        right: 0;
+        opacity: 1
+    }
 }
 
 .button-container {
@@ -198,6 +231,12 @@ button[onclick="plusDivs(-1)"] {
 
 }
 
+button[onclick="plusDivs(-1)"]:hover {
+    color: #f7c989;
+    scale: 1.5;
+    transition: 1s;
+}
+
 button[onclick="plusDivs(+1)"] {
     margin-left: 85vw;
     display: inline;
@@ -208,6 +247,12 @@ button[onclick="plusDivs(+1)"] {
     border: 0;
     font-size: 5vw;
     color: #cacaca;
+}
+
+button[onclick="plusDivs(+1)"]:hover {
+    color: #f7c989;
+    scale: 1.5;
+    transition: 1s;
 }
 
 .text-container {
