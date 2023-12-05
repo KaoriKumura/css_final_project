@@ -164,18 +164,20 @@
                     }
                 })
               })
-            function toggleAnswer(questionNumber) {
-              var answerDiv = document.getElementById('answer' + questionNumber);
-              var currentDisplay = window.getComputedStyle(answerDiv).display;
-        
-              if (currentDisplay === 'none') {
-                answerDiv.style.display = 'block';
-                document.querySelector('#button' + questionNumber).textContent = '+' + questionNumber;
-              } else {
-                answerDiv.style.display = 'none';
-                document.querySelector('#button' + questionNumber).textContent = '-' + questionNumber;
-              }
+              
+              function toggleAnswer(questionNumber) {
+                var answerDiv = document.getElementById('answer' + questionNumber);
+                var currentDisplay = window.getComputedStyle(answerDiv).display;
+
+                if (currentDisplay === 'none') {
+                    answerDiv.style.display = 'block';
+                    document.querySelector('#button' + questionNumber).textContent = '+' + questionNumber;
+                } else {
+                    answerDiv.style.display = 'none';
+                    document.querySelector('#button' + questionNumber).textContent = '-' + questionNumber;
+                }
             }
+
           </script>
     </body>
 </html>

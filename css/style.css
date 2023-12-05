@@ -729,10 +729,11 @@ a[href="#"] {
   margin-left: auto;
   margin-top: 5rem;
   max-width: 1000px;
+  
 }
 
 .answer {
-    display: none; 
+    display: none;  
 }
 
 .frequent_quetions_title{
@@ -742,6 +743,7 @@ a[href="#"] {
 
 .question1, .question2, .question3,.question4, .question5{
     padding-top: 1em;
+    
 }
 
 button {
@@ -756,6 +758,16 @@ span{
     display: flex;
     justify-content: space-between;
 }
+
+.transform{
+    transition: all 2s ease;
+  }
+  
+  .transform-active{
+    background-color: #45cee0;
+    height: 200px;
+    width: 200px;
+  }
 
 /* social media link */
 section.socialmedia-section{
