@@ -11,6 +11,7 @@ html {
 
 h1, h2, h3, h4 {
     letter-spacing: 0.2rem;
+    font-family: 'Sumana';
 }
 
 :root {
@@ -58,6 +59,7 @@ body {
 }
 
 .title h1 {
+    font-family: 'Sumana';
     position: absolute;
     z-index: 2;
     top: 40%;
@@ -67,7 +69,7 @@ body {
 }
 
 .index h1 {
-    padding-left: 26vw;
+    padding-left: 28vw;
 }
 
 .about h1 {
