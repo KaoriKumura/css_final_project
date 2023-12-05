@@ -652,8 +652,9 @@ a[href="#"] {
 .contact_us{
     font-size: 40px;
     font-family: 'Sumana', serif;
-    padding: 2em 0em 0em 11em;
     color:#1E3932 ;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .form_section div.form{
@@ -661,6 +662,7 @@ a[href="#"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1000px;
 }
 
 .form_section form{
@@ -719,9 +721,14 @@ a[href="#"] {
 
 /* frequent_quetions_parts */
 .frequent_quetions_part{
-  padding: 3em 18em 1em 25em;
+  justify-content: center;
   color:#1E3932 ;
   background: #ffffff;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5rem;
+  max-width: 1000px;
 }
 
 .answer {
@@ -841,7 +848,10 @@ h5.history-subtitle{
   }
 
 div.company-history-part{
-    padding: 2em 17em 4em 17em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    width: 60%;
 }
 
 .history-body{
