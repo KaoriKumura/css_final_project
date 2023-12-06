@@ -43,22 +43,22 @@
         <section>
             <div class="products-slideshow-whole-part">
                 <div class="products-slideshow-grid-x">
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage1.png" alt="productImage1"></div>
                     </div>             
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage2.png" alt="productImage2"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage3.png" alt="productImage3"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage4.png" alt="productImage4"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage5.png" alt="productImage5"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage6.png" alt="productImage6"></div>
                     </div>              
                     <div class="button-container">
@@ -483,12 +483,20 @@
             function showDivs(n) {
             var i;
             var slides = document.getElementsByClassName("products-slideshow-container");
+            var fadeEffect = document.getElementsByClassName("animateForProduct");
             if (n > slides.length) {
                 slideIndex = 1;
             }
             if (n < 1) {
                 slideIndex = slides.length;
             }
+
+            for (i = 0; i < fadeEffect.length; i++) {
+                fadeEffect[i].style.animationName = "none";
+            }
+
+            fadeEffect[slideIndex - 1].style.animationName = "fade";
+
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }

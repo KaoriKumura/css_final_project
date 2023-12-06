@@ -477,6 +477,20 @@ a[href="#"] {
 /*products page*/
 /*slideshow for products*/
 
+.animateForProduct {
+    animation-name: fade;
+    animation-duration: 2000ms;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1
+    }
+}
+
 .products-slideshow-grid-x {
     display: flex;
     flex-flow: row wrap;
