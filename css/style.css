@@ -361,6 +361,25 @@ button[onclick="plusDivs(+1)"]:hover {
     background: #8db8ac;
 }
 
+.about-preview-text button:hover {
+    background: rgb(184, 161, 141);
+}
+
+.about-preview-text button:active {
+    background: rgb(184, 161, 141);
+    color: #6cffd8;
+}
+
+.animateForAboutPreview{
+    animation-name: fadeOut;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeOut {
+    0%{opacity: .4}
+    100%{opacity: 1}
+}
+
 /*home subscribe*/
 
 .subscribe-grid-x {
@@ -417,10 +436,12 @@ button[onclick="plusDivs(+1)"]:hover {
     padding: 1rem;
     color: #8db8ac;
     margin-bottom: 3rem;
+    border: none;
+    border-radius: 0.5rem;
 }
 
 ::placeholder {
-    color: #8d7e7a;
+    color: #d4beb8;
 }
 
 .subscribe-form-continer button {
@@ -433,6 +454,16 @@ button[onclick="plusDivs(+1)"]:hover {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border-radius: 0.5rem;
+}
+
+.subscribe-form-continer button:hover {
+    background: #6cffd8;
+    color: #346458;
+}
+
+.subscribe-form-continer button:active {
+    background: rgb(184, 161, 141);
+    color: #ffffff;
 }
 
 /*footer*/
