@@ -23,7 +23,7 @@
                     <img src="image/StarbucksLogo.svg" alt="logo">
                 </a>
                 <a class="navbar-link" href="about.html">ABOUT</a>
-                <a class="navbar-link" href="contact.html">CONTACT</a>
+                <a class="navbar-link" id="contact" href="contact.html">CONTACT</a>
             </div>
             <div class="video-container title-grid-x">
                 <div class="title contact"><h1>CONTACT</h1></div>
@@ -156,11 +156,13 @@
                     if (scroll > 100) {
                       $(".nav-container").css("background" , "#8d7e7a7a");
                       $(".navbar-link").css("color" , "#38241e");
+                      $("#contact").css("color", "#6cffd8");
                     }
               
                     else{
                         $(".nav-container").css("background" , "#8d7e7a");
-                        $("a[href]").css("color" , "#cacaca");  	
+                        $("a[href]").css("color" , "#cacaca");
+                        $("#contact").css("color", "#6cffd8");  	
                     }
                 })
               })

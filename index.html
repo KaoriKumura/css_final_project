@@ -16,7 +16,7 @@
     <body>
         <section class="section-nav">
             <div class="nav-container nav-grid-x">
-                <a class="navbar-link" href="index.html">HOME</a>
+                <a class="navbar-link" id="home" href="index.html">HOME</a>
                 <a class="navbar-link" href="products.html">PRODUCTS</a>
                 <a>
                     <img src="image/StarbucksLogo.svg" alt="logo">
@@ -184,14 +184,17 @@
                     if (scroll > 100) {
                       $(".nav-container").css("background" , "#8d7e7a7a");
                       $(".navbar-link").css("color" , "#38241e");
+                      $("#home").css("color", "#6cffd8");
                     }
               
                     else{
                         $(".nav-container").css("background" , "#8d7e7a");
-                        $("a[href]").css("color" , "#cacaca");  	
+                        $("a[href]").css("color" , "#cacaca");
+                        $("#home").css("color", "#6cffd8");  	
                     }
                 })
               })
+
         </script>
     </body>
 </html>

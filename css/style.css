@@ -94,6 +94,10 @@ button, a {
 
 /*nav bar*/
 
+.navbar-link:hover {
+    scale: 1.2;
+}
+
 .section-nav {
     height: 100%;
 }
@@ -120,6 +124,10 @@ a[href] {
     font-size: 1rem;
     font-weight: 500;
     color: #cacaca;
+}
+
+#home, #about, #contact, #products {
+    color: #6cffd8;
 }
 
 /*slogan*/
@@ -482,12 +490,27 @@ a[href="#"] {
     animation-duration: 2000ms;
 }
 
+.animate-for-product-text {
+    animation-name: leftIn;
+    animation-duration: 2000ms;
+    position: relative;
+}
+
 @keyframes fade {
     0%{
         opacity: 0
     }
     100%{
         opacity: 1
+    }
+}
+
+@keyframes leftIn {
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left:0;
     }
 }
 
@@ -518,6 +541,18 @@ a[href="#"] {
 
 #productsbutton1, #productsbutton2 {
     color: #8d7e7a;
+}
+
+#productsbutton1:hover {
+    color: #fcc299;
+    scale: 1.5;
+    transition: 1s;
+}
+
+#productsbutton2:hover {
+    color: #fcc299;
+    scale: 1.5;
+    transition: 1s;
 }
 
 /*products in product page*/
