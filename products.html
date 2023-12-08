@@ -17,7 +17,7 @@
         <section class="section-nav">
             <div class="nav-container nav-grid-x">
                 <a class="navbar-link" href="index.html">HOME</a>
-                <a class="navbar-link" href="products.html">PRODUCTS</a>
+                <a class="navbar-link" id="products" href="products.html">PRODUCTS</a>
                 <a>
                     <img src="image/StarbucksLogo.svg" alt="logo">
                 </a>
@@ -43,22 +43,22 @@
         <section>
             <div class="products-slideshow-whole-part">
                 <div class="products-slideshow-grid-x">
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage1.png" alt="productImage1"></div>
                     </div>             
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage2.png" alt="productImage2"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage3.png" alt="productImage3"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage4.png" alt="productImage4"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage5.png" alt="productImage5"></div>
                     </div>
-                    <div class="products-slideshow-container">
+                    <div class="products-slideshow-container animateForProduct">
                         <div class="products-image-container"><img src="image/productImage6.png" alt="productImage6"></div>
                     </div>              
                     <div class="button-container">
@@ -71,7 +71,7 @@
         <section>
             <div class="products-container">
                 <!--first product-->
-                <div class="div-For-Products-Slideshow">
+                <div class="div-For-Products-Slideshow animate-for-product-text">
                 <div class="products-grid-x">
                     <div class="products-text-container">
                         <h2>Starbucks<sup>&#174</sup>  Caffè Verona<sup>&#174</sup></h2>
@@ -134,7 +134,7 @@
                 </div>
                 </div>
                 <!--second product-->
-                <div class="div-For-Products-Slideshow">
+                <div class="div-For-Products-Slideshow animate-for-product-text">
                 <div class="products-grid-x">
                     <div class="products-text-container">
                         <h2>Starbucks<sup>&#174</sup> French Roast</h2>
@@ -196,7 +196,7 @@
                 </div>
                 </div>
                 <!--third product-->
-                <div class="div-For-Products-Slideshow">
+                <div class="div-For-Products-Slideshow animate-for-product-text">
                     <div class="products-grid-x">
                         <div class="products-text-container">
                             <h2>Starbucks<sup>&#174</sup> House Blend</h2>
@@ -259,7 +259,7 @@
                     </div>
                 </div>
                 <!--fourth product-->
-                <div class="div-For-Products-Slideshow">
+                <div class="div-For-Products-Slideshow animate-for-product-text">
                     <div class="products-grid-x">
                         <div class="products-text-container">
                             <h2>Starbucks<sup>&#174</sup> Pike Place<sup>&#174</sup> Roast</h2>
@@ -322,7 +322,7 @@
                     </div>
                 </div>
                 <!--fifth product-->
-                <div class="div-For-Products-Slideshow">
+                <div class="div-For-Products-Slideshow animate-for-product-text">
                     <div class="products-grid-x">
                         <div class="products-text-container">
                             <h2>Starbucks<sup>&#174</sup> Espresso Roast</h2>
@@ -385,7 +385,7 @@
                     </div>
                 </div>
                 <!--sixth product-->
-                <div class="div-For-Products-Slideshow">
+                <div class="div-For-Products-Slideshow animate-for-product-text">
                     <div class="products-grid-x">
                         <div class="products-text-container">
                             <h2>Starbucks<sup>&#174</sup> Breakfast Blend</h2>
@@ -483,12 +483,20 @@
             function showDivs(n) {
             var i;
             var slides = document.getElementsByClassName("products-slideshow-container");
+            var fadeEffect = document.getElementsByClassName("animateForProduct");
             if (n > slides.length) {
                 slideIndex = 1;
             }
             if (n < 1) {
                 slideIndex = slides.length;
             }
+
+            for (i = 0; i < fadeEffect.length; i++) {
+                fadeEffect[i].style.animationName = "none";
+            }
+
+            fadeEffect[slideIndex - 1].style.animationName = "fade";
+
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -498,12 +506,20 @@
             function showTextDivs(n) {
                 var i;
                 var slidesText = document.getElementsByClassName("div-For-Products-Slideshow");
+                var animateText = document.getElementsByClassName("animate-for-product-text");
                 if (n > slidesText.length) {
                     slideTextIndex = 1;
                 }
                 if (n < 1) {
                     slideTextIndex = slidesText.length;
                 }
+
+                for (i = 0; i < animateText.length; i++) {
+                    animateText[i].style.animationName = "none";
+                }
+    
+                animateText[slideIndex - 1].style.animationName = "leftIn";
+
                 for (i = 0; i < slidesText.length; i++) {
                     slidesText[i].style.display = "none";
                 }
@@ -778,11 +794,13 @@
                     if (scroll > 100) {
                       $(".nav-container").css("background" , "#8d7e7a7a");
                       $(".navbar-link").css("color" , "#38241e");
+                      $("#products").css("color", "#6cffd8");
                     }
               
                     else{
                         $(".nav-container").css("background" , "#8d7e7a");
-                        $("a[href]").css("color" , "#cacaca");  	
+                        $("a[href]").css("color" , "#cacaca");
+                        $("#products").css("color", "#6cffd8");  	
                     }
                 })
               })

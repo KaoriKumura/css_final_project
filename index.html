@@ -16,7 +16,7 @@
     <body>
         <section class="section-nav">
             <div class="nav-container nav-grid-x">
-                <a class="navbar-link" href="index.html">HOME</a>
+                <a class="navbar-link" id="home" href="index.html">HOME</a>
                 <a class="navbar-link" href="products.html">PRODUCTS</a>
                 <a>
                     <img src="image/StarbucksLogo.svg" alt="logo">
@@ -72,8 +72,11 @@
             </div>
         </section>
         <section class="about-preview-grid-x">
-            <div class="about-preview-container">
+            <div class="about-preview-container animateForAboutPreview">
                 <div class="about-preview-image"><img src="image/view7.jpg" alt="starbucks old building"></div>
+                <div class="about-preview-image"><img src="image/view8.jpeg" alt="starbucks pink building"></div>
+                <div class="about-preview-image"><img src="image/view9.jpeg" alt="starbucks beach building"></div>
+                <div class="about-preview-image"><img src="image/view10.jpeg" alt="starbucks night building"></div>
                 <div class="about-preview-text">
                     <h2>ABOUT US</h2>
                     <P>Discover what makes Starbucks<sup>&#174</sup> unique, from our commitment to human connection and quality coffee, to our welcoming coffeehouses, and delicious coffees you can enjoy at home.</P>
@@ -91,7 +94,7 @@
                                 <input type="email" placeholder="Please type your email"/>
                             </div>
                             <div>
-                                <button type="button">SUBSCRIBE</button>
+                                <button class="subscribeButton" type="button">SUBSCRIBE</button>
                             </div>
                         </form>
                     </div>
@@ -184,14 +187,41 @@
                     if (scroll > 100) {
                       $(".nav-container").css("background" , "#8d7e7a7a");
                       $(".navbar-link").css("color" , "#38241e");
+                      $("#home").css("color", "#6cffd8");
                     }
               
                     else{
                         $(".nav-container").css("background" , "#8d7e7a");
-                        $("a[href]").css("color" , "#cacaca");  	
+                        $("a[href]").css("color" , "#cacaca");
+                        $("#home").css("color", "#6cffd8");  	
                     }
                 })
               })
+            
+            /*about preview auto slideshow*/
+            var slideNum = 0;
+            aboutPreview();
+
+            function aboutPreview() {
+                var i;
+                var slides = document.getElementsByClassName("about-preview-image");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideNum++;
+                if (slideNum > slides.length) {slideNum = 1}    
+
+                slides[slideNum-1].style.display = "block";  
+
+                setTimeout(aboutPreview, 2000); // Change image every 2 seconds
+            }
+
+            /*subscribe click function*/
+            var subscribe = document.querySelector("button.subscribeButton");
+            subscribe.addEventListener('click',function(){
+               alert('THANK YOU FOR SUBSCRIBING'); 
+            })
         </script>
     </body>
 </html>
