@@ -813,7 +813,7 @@ a[href="#"] {
 }
 
 .answer {
-    display: none;  
+    display: none;
 }
 
 .frequent_quetions_title{
@@ -832,7 +832,13 @@ button {
     font-size: 40px;
     color:#1E3932 ;
     padding-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
+
+button.rotate {
+    transform: rotate(45deg);
+  }
 
 span{
     display: flex;
@@ -861,12 +867,21 @@ section.socialmedia-section{
 
 img.xlogo, img.facebooklogo{
     width: 50px;
+    transition: transform 0.3s ease-in-out;
+    
+}
+img.xlogo:hover, img.facebooklogo:hover{
+    transform: rotate(180deg);
     
 }
 
 img.instalogo{
     width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
 
+img.instalogo:hover{
+    transform: rotate(180deg);
 }
 
 .socialmedia-xlogo, .socialmedia-instalogo{
@@ -981,4 +996,6 @@ img.store{
     width: 100%;
     display: inline-block;
     vertical-align: middle;
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
 }

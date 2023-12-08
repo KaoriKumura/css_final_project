@@ -47,7 +47,9 @@
                 <div class="question1">
                     <span>
                         <p class="frequent_quetion">ARE STARBUCKS® COFFEE ENHANCER PACKAGING RECYCLABLE ?</p>
-                        <button onclick="toggleAnswer(1)">+</button>
+                        <!-- <button onclick="toggleAnswer(1)" id="button1">+</button> -->
+                        <button onclick="toggleAnswer(1)" id="button1"><img src="image/icons8-hot-chocolate.gif" alt="coffee"></button>
+
                     </span>
                     <div id="answer1" class="answer">
                         <p class="frequent_answer">Yes, the Starbucks® Coffee Enhancer packaging is recyclable! Simply place the bottle in your recycling bin after removing the sleeve.</p>
@@ -58,7 +60,8 @@
                 <div class="question2">
                     <span>
                         <p class="frequent_quetion">WHERE CAN I BUY STARBUCKS® COFFEE ENHANCERS?</p>
-                        <button onclick="toggleAnswer(2)">+</button>
+                        <!-- <button onclick="toggleAnswer(2)">+</button> -->
+                        <button onclick="toggleAnswer(2)" id="button2"><img src="image/icons8-hot-chocolate.gif" alt="coffee"></button>
                     </span>
                     <div id="answer2" class="answer">
                         <p class="frequent_answer">They are available for purchase at your local grocery store in the refrigerated dairy section.</p>
@@ -68,7 +71,8 @@
                 <div class="question3">
                     <span>
                         <p class="frequent_quetion">WHAT IS THE SHELF LIFE OF STARBUCKS® COFFEE ENHANCERS?</p>
-                        <button onclick="toggleAnswer(3)">+</button>
+                        <!-- <button onclick="toggleAnswer(3)">+</button> -->
+                        <button onclick="toggleAnswer(3)" id="button3"><img src="image/icons8-hot-chocolate.gif" alt="coffee"></button>
                     </span>
                     <div id="answer3" class="answer">
                         <p class="frequent_answer">Starbucks® Coffee Enhancers should be used within 14 days after opening or before the use-by date, whichever comes first. The shelf life can vary due to packaging materials and manufacturing locations.</p>
@@ -79,7 +83,8 @@
                 <div class="question4">
                     <span>
                         <p class="frequent_quetion">WHERE ARE STARBUCKS® COFFEE ENHANCERS MANUFACTURED?</p>
-                        <button onclick="toggleAnswer(4)">+</button>
+                        <!-- <button onclick="toggleAnswer(4)">+</button> -->
+                        <button onclick="toggleAnswer(4)" id="button1"><img src="image/icons8-hot-chocolate.gif" alt="coffee"></button>
                     </span>
                     <div id="answer4" class="answer">
                         <p class="frequent_answer">Starbucks® Coffee Enhancers are proudly prepared in Toronto, Canada!</p>
@@ -89,7 +94,8 @@
                 <div class="question5">
                     <span>
                         <p class="frequent_quetion">ARE STARBUCKS® COFFEE ENHANCERS MADE WITH ARTIFICIAL COLOURS OR FLAVOURS?</p>
-                        <button onclick="toggleAnswer(5)">+</button>
+                        <!-- <button onclick="toggleAnswer(5)">+</button> -->
+                        <button onclick="toggleAnswer(5)" id="button5"><img src="image/icons8-hot-chocolate.gif" alt="coffee"></button>
                     </span>
                     <div id="answer5" class="answer">
                         <p class="frequent_answer">No, Starbucks® Coffee Enhancers are made with no artificial colours, flavours or sweeteners.</p>
@@ -167,24 +173,21 @@
                 })
               })
               
-            function toggleAnswer(questionNumber) {
-                var answerDiv = document.getElementById('answer' + questionNumber);
-                var currentDisplay = window.getComputedStyle(answerDiv).display;
+              function toggleAnswer(questionNumber) {
+      var answerId = "answer" + questionNumber;
+      var answer = document.getElementById(answerId);
+      var button = document.getElementById("button" + questionNumber);
 
-                if (currentDisplay === 'none') {
-                    answerDiv.style.display = 'block';
-                    document.querySelector('#button' + questionNumber).textContent = '+' + questionNumber;
-                } else {
-                    answerDiv.style.display = 'none';
-                    document.querySelector('#button' + questionNumber).textContent = '-' + questionNumber;
-                }
-            }
-
-            /*subscribe click function*/
-            var submitButton = document.querySelector("button.submit");
-            submitButton.addEventListener('click',function(){
-               alert("Thanks for sending us messages. \n We'll reply you in 3 working days!"); 
-            })
+      if (answer.style.display === 'none' || answer.style.display === '') {
+        answer.style.display = 'block';
+        answer.style.opacity = '1'; /* 追加 */
+        button.classList.add("rotate"); /* 追加 */
+      } else {
+        answer.style.display = 'none';
+        answer.style.opacity = '0'; /* 追加 */
+        button.classList.remove("rotate"); /* 追加 */
+      }
+    }
 
           </script>
     </body>

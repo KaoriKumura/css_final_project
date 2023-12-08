@@ -113,6 +113,20 @@
                     }
                 })
               })
+
+     
+            // scroll fade in image
+            window.addEventListener('scroll', function() {
+            
+            var image = document.querySelector('.store');
+            var imageContainer = document.querySelector('.store_pic_part');
+            var positionFromTop = imageContainer.getBoundingClientRect().top;
+
+            if (positionFromTop - window.innerHeight < 0) {
+                image.style.opacity = '1';
+            }
+            });
+
         </script>
     </body>
 </html>
