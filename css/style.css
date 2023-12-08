@@ -808,6 +808,12 @@ div.photo_hover{
     height: 90vh;
 }
 
+@media (max-width: 700px) {
+    div.photo_hover {   
+      flex-direction: column;
+    }
+  }
+
 h1.history-title{
     font-size: 50px;
     font-family: 'Sumana', serif;
@@ -815,7 +821,7 @@ h1.history-title{
 
 h5.history-subtitle{
     color: #04694e;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .sustainability, .lifestyle, .craft{
@@ -881,14 +887,14 @@ div.company-history-part{
     font-size: 70px;
     line-height: 98px;
     margin: 50px;
-    margin-top: 400px;
+    margin-top: 300px;
 }
 
 .store_subtitle{
     font-family: 'Sumana', serif;
     position: absolute;
-    margin: 50px;
-    margin-top: 345px;
+    margin: 30px;
+    margin-top: 230px;
 }
 
 img.store{
